@@ -20,7 +20,7 @@ const Home = () => {
             <h2>{item.name}</h2>
             <p>R$: {item.price}</p>
             {/* 4 - rota dinâmica */}
-            <Link to={`/products/${item.id}`}>Detalhes</Link>
+            <Link to={`/products/${item.id}/info`}>Detalhes</Link>
           </li>
         ))}
       </ul>
