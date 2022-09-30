@@ -5,9 +5,9 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="nav">
-      <NavLink to="/first">First</NavLink>
-      <NavLink to="/second">Second</NavLink>
-      <NavLink to="/third">Third</NavLink>
+      <NavLink to="/About">About</NavLink>
+      <NavLink to="/Home">Home</NavLink>
+      <NavLink to="/Products">Products</NavLink>
     </div>
   );
 };
