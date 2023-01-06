@@ -4,6 +4,11 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 //context
 import { AuthProvider } from "./context/AuthContext";
+import { onAuthStateChanged } from "firebase/auth";
+
+// hooks
+import { useState, useEffect } from "react";
+import { useAuthentication } from "./hooks/useAuthentication";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home/Home";
@@ -15,6 +20,11 @@ import Login from "./pages/Login/Login";
 // pages
 
 function App() {
+  const [user, setUser] = useState(undefined);
+  const { auth } = useAuthentication();
+
+  const loadingUser = user === undefined
+
   return (
     <div className="App">
       <AuthProvider>
